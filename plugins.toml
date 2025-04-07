@@ -8,6 +8,12 @@ colorscheme nightfly
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+let g:gitgutter_enabled = 1
+'''
+
+[[plugins]]
 repo = 'Shougo/ddc.vim'
 hook_add = '''
 call ddc#custom#patch_global({
