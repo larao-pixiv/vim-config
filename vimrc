@@ -2,11 +2,10 @@ set number
 set tabstop=2
 set shiftwidth=2
 set clipboard+=unnamed
+set noswapfile
+set smartindent
 
-if has('syntax')
-	syntax on
-	set regexpengine=0
-endif
+set signcolumn=yes
 
 const s:denops_src = '~/.cache/dpp/repos/github.com/vim-denops/denops.vim'
 const s:denops_hello = '~/.cache/dpp/repos/github.com/vim-denops/denops-helloworld.vim'
@@ -39,3 +38,10 @@ autocmd User Dpp:makeStatePost
 	\	: echohl WarningMsg
 	\	| echomsg 'dpp make_state() is done'
 	\	| echohl NONE
+
+if has('syntax')
+	syntax on
+	set regexpengine=0
+endif
+
+
