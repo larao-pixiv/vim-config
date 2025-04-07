@@ -14,6 +14,12 @@ let g:gitgutter_enabled = 1
 '''
 
 [[plugins]]
+repo = 'voldikss/vim-floaterm'
+hook_add = '''
+nnoremap <C-t> <CMD>FloatermToggle<CR>
+'''
+
+[[plugins]]
 repo = 'Shougo/ddc.vim'
 hook_add = '''
 call ddc#custom#patch_global({
