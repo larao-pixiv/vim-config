@@ -8,7 +8,7 @@ import { expand } from "jsr:@denops/std/function";
 
 
 export class Config extends BaseConfig {
-	override async config(args: ConfigArguments): ConfigReturn {
+	override async config(args: ConfigArguments): Promise<ConfigReturn> {
 		args.contextBuilder.setGlobal({
 			protocols: ["git"],
 		});
@@ -27,13 +27,18 @@ export class Config extends BaseConfig {
 			}
 		);
 
+		const tomlHooksFiles: string[] | undefined = [];
+		if (toml.hooks_file !== undefined) {
+			tomlHooksFiles.push(toml.hooks_file)
+		}
+
 		console.log(toml);
 
 		return {
-			plugins: toml.plugins,
+			plugins: toml.plugins ?? [],
 			ftplugins: toml.ftplugins,
-			hooks_file: toml.hooks_file,
-			multiple_hooks: toml.multiple_hooks,
+			hooksFiles: tomlHooksFiles,
+			multipleHooks: toml.multiple_hooks,
 		}
 	}
 }
