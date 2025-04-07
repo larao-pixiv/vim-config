@@ -5,6 +5,8 @@ set clipboard+=unnamed
 set noswapfile
 set smartindent
 
+let g:mapleader = " "
+
 set signcolumn=yes
 
 const s:denops_src = '~/.cache/dpp/repos/github.com/vim-denops/denops.vim'

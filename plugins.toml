@@ -127,7 +127,7 @@ function! s:ddu_my_settings() abort
   	\ <Cmd>call ddu#ui#do_action('quit')<CR>
 endfunction
 
-nnoremap fe <CMD>call ddu#start({ "name": "filer" })<CR>
+nnoremap <leader>fe <CMD>call ddu#start({ "name": "filer" })<CR>
 '''
 
 [[plugins]]
