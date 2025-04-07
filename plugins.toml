@@ -11,6 +11,7 @@ repo = 'tpope/vim-commentary'
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
 let g:gitgutter_enabled = 1
+autocmd BufWritePost * GitGutter
 '''
 
 [[plugins]]
